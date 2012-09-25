@@ -28,17 +28,17 @@ Shore DBMS - 4% of performance is actual work (24% each for latching, locking, r
 
 ###Options
 * OldSQL (legacy RDBMS)
- * Old code lines (from 1980's)
- * "bloatware"
- * Spend all of their time on overhead, this is written into the large codebase
- * Reading: *The innovators dilemma" by Clayton Christenson
- * Longterm drift
+    * Old code lines (from 1980's)
+    * "bloatware"
+    * Spend all of their time on overhead, this is written into the large codebase
+    * Reading: *The innovators dilemma" by Clayton Christenson
+    * Longterm drift
 * NoSQL (forget SQL and ACID for performance)
- * Give up traditional ACID and SQL
- * Compiler translates SQL into low level operations
- * 30 years of RDBMS Experience: Hard to beat compiler, Stored Procs are good (1 trip from app to DBMS)
- * Data consistency without ACID sucks
- * Hard to guarantee you won't need ACID later
+    * Give up traditional ACID and SQL
+    * Compiler translates SQL into low level operations
+    * 30 years of RDBMS Experience: Hard to beat compiler, Stored Procs are good (1 trip from app to DBMS)
+    * Data consistency without ACID sucks
+    * Hard to guarantee you won't need ACID later
 * NewSQL (performance from new architecture)
 
 ###ACID needs
