@@ -1,0 +1,56 @@
+body {
+  font-size: 48px;
+  font-family: Helvetica;
+}
+.impress-on-first,
+.impress-on-second {
+  background-image: url('arch.jpg');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-clip: content-box;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+h1 {
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 56px;
+}
+#first {
+  margin-top: 150px;
+  color: white;
+}
+#second {
+  margin-top: 210px;
+  padding-left: 80px;
+  color: white;
+}
+.es6 {
+  height: 800px;
+}
+.go {
+  height: 800px;
+}
+.step {
+  min-width: 1200px;
+  opacity: 0.1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.step.active {
+  opacity: 1;
+  z-index: 1000;
+}
+.example {
+  min-height: 500px;
+  width: 1200px;
+  font-family: monospace;
+  font-size: 24px;
+  padding: 20px;
+  opacity: 1;
+  background: #222;
+  color: #EEE;
+}
+.example span {
+  color: #999;
+}
