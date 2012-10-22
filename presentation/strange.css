@@ -1,0 +1,16 @@
+.voice{
+	background-color: #0066ff;
+	height: 600px;
+	width: 800px;
+	padding: 20px;
+}
+.header{
+	position:relative;
+	top: 40%;
+	margin: auto;
+	text-align:center;
+}
+
+.center{
+
+}

@@ -2,6 +2,7 @@
    <head>
       <title>Strange Loop 2012</title>
       <link href="presentation.css" type="text/css" rel="stylesheet">
+      <link href="strange.css" type="text/css" rel="stylesheet">
    </head>
    <body>
       <div id="impress">
@@ -155,37 +156,43 @@
 
          time.Sleep(4 * 1e9)
       }
-            </pre>
+         </pre>
+      </div>
+      <div class="step voice" data-x="20000" data-y="0" data-scale="11">
+         <div class="header">
+            Voice Navigated Apps
          </div>
-      <div class="step voice header" data-x="-1000" data-y="-1500">
-        Voice Navigated Apps
       </div>
-      <div class="step voice" data-x="-1000" data-y="-1500">
-        Robert Van Loghem
-        He's Dutch
+      <div class="step voice" data-x="21000" data-y="1000" data-scale="10">
+         <div>
+            Robert Van Loghem
+         </div>
+         <div>
+            He's Dutch
+         </div>
       </div>
-      <div>
+      <div class="step voice" data-x="23000" data-y="2000" data-scale="9">
         They built a voice controlled train route navigator.
         Voice is faster than typing on a phone for complicated user input.
       </div>
-      <div>
+      <div class="step voice" data-x="24000" data-y="3000" data-scale="8">
         Bad Examples of Voice Navigation
       </div>
-      <div>
+      <div class="step voice" data-x="25000" data-y="4000" data-scale="7">
         TV Volume Up
         Next page
         Continue
 
         We can do these faster with a button.
       </div>
-      <div>
+      <div class="step voice" data-x="21000" data-y="5000" data-scale="6">
         Good examples:
       </div>
-      <div>
+      <div class="step voice" data-x="21000" data-y="6000" data-scale="5">
         I want to get from London to Paris.
         I want 3 hamburgers and 2 fries.
       </div>
-      <div>
+      <div class="step voice" data-x="21000" data-y="7000" data-scale="4">
         Use voice to get complicated context from simple strings.
         Don't worry about fancy language processing, just look for keywords.
         Add support for hard to do but common tasks.
@@ -193,22 +200,183 @@
         Don't mimic your normal user flow.
         Took them 6 hours for the initial beta, only positive feedback so far.
       </div>
-      <div>
+      <div class="step voice" data-x="21000" data-y="8000" data-scale="3">
         Use in Compass:
       </div>
-      <div>
+      <div class="step voice" data-x="21000" data-y="9000" data-scale="2">
         I want to arrive one day before the show and leave the last day.
         Key words arrive one day before, leave last day.
         Amenities:  I want a king bed and early arrival, easy with voice.
         Manage your users expectations, explain the magic to them.
       </div>
-    </div>
-
-
-         <div class="step" data-x="12000" data-y="6000">
-            fin
-         </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        Cross Browser Testing with BrowserStack
+        Scott Gonzales, Project Lead for jqueryUI
       </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        Jquery is designed to be ran on Current Browsers and the Previous Revision, except for IE
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        They started off testing jQuery Mobile on physical devices and it was impossible to manage.  
+        Even keeping everything charged was a nightmare.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        BrowserStack supports multiple OS's, Broswers, and Mobile devices via emulators.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        It's simply an Amazon VM with a Flash frontend.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        It also has an in progress api for spinning up machines and making sure things render.  
+        They're working on having the api take screenshots for visual tests.
+        It has a tunnel so you can also test local development.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+         Use in Compass:
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        I've already used it to develop the mobile redirect.  
+        Was able to test Chrome, IE, Opera, Safari, Iphone, Ipad, and many Android devices.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+         Lets Take a Look:
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+         Price
+         $79/mo for 10 users, $169 for unlimited users.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo Db Unsession
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Jeffrey Galloway 
+         Ansers.com
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Quick hints I picked up:
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo uses BSON, which is JSON with types.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo runs awfully on EC2 if you don't have enough memory and hit the disk for data.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Never, ever run mongo in 32 bit mode.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         For error checking, regularlycheck getLastError if you care about your data.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Store large documents instead of small loads.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo will use more ram and disk space compared to sql.
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Visible Programming
+        Brett Victor
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        We are creating programs without seeing what they're doing at runtime
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        5 Things to aim for when designing an IDE.
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Read the Language
+            Make meaning transparent, explain in contest
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Follow the Flow
+            Make the flow tangeable and visible
+            Make time tangeable and visible
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        See the state
+            Show the data
+            Show comparisons
+            Eliminate hidden states
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Create by reacting
+            Get something on the screen as soon as possible
+            Dump the parts bucket onto the floor
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Create by abstracting
+            Start constant, then vary
+            Start with one, then make many
+            Start concrete, then generalize
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Failed Presentations
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Computer Architecture of the Sixties.
+        Carlton Mills - Retired
+      <div class = "step failure" data-x="30000" data-y="0">
+        Started out promising
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Explained that many of today's problems were already solved back in the mainframe era of the 60's
+        Computers back then were multi cored, so they had to get a handle on multi threaded programming.
+        He also showed us many old adds and prices.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Then he went into crazy old man rant mode.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Then he went over and had to get kicked off the stage.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Stop using native html 5.
+        Kyle Simpson
+        Wrote the html5 Cookbook
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Wrote the h5ive facade for html 5 features, works kind of like a bad jQeury without nearly as many features and no polyfils.
+        If you want to use different syntax to write html5, but don't want it to work in any old browsers, he's your guy.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        He also looks like a nerdier John Goodman.
+      </div>
+
+      <div class = "step failure" data-x="30000" data-y="0">
+        As We Ma Do, AR and Computer Vision
+        Neil Milsted
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Started off using the word cyberspace, not a good start.
+        Also didn't check the lighting in the room, couldn't demo his ar code properly.
+        Solved a rubicks cube by holding it up to the camera and an arrow appeard on the screen.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Then his presentation crashed, and he didn't know how to resume it.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        He's never used a Kinect, and doesn't know about any other real world examples other than the first down line in football
+        Worst presentation of the show.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Christ what an asshole.
+      </div>
+
+      <div class = "step failure" data-x="30000" data-y="0">
+        Doppio, JVM in the browser
+        Jez Ng, Cj Carey, Jonny Leahy
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Uses coffeescript and node.js
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Was their senior project, barely works.
+      </div>
+      <div class="step" data-x="12000" data-y="6000">
+            fin
+      </div>
+   </div>
+
       <script src="impress.min.js"></script>
       <script>impress().init();</script>
    </body>
