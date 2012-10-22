@@ -1,9 +1,33 @@
 .voice{
-	background-color: #0066ff;
+	background-color: #5C81FA;
 	height: 600px;
 	width: 800px;
 	padding: 20px;
 }
+
+.browser{
+	background-color:#006124;
+	color: #FFFFFF;
+	height: 600px;
+	width: 800px;
+	padding: 20px;
+}
+
+.mongo{
+	background-color: #FAA125;
+	height: 600px;
+	width: 800px;
+	padding: 20px;
+}
+
+.prog{
+	background-color:#82000F;
+	color: #FFFFFF;
+	height: 600px;
+	width: 800px;
+	padding: 20px;
+}
+
 .header{
 	position:relative;
 	top: 40%;
@@ -12,5 +36,9 @@
 }
 
 .center{
+
+}
+.image{
+	padding: 10px;
 
 }

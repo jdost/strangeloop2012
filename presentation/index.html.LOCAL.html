@@ -1,0 +1,383 @@
+<html>
+   <head>
+      <title>Strange Loop 2012</title>
+      <link href="presentation.css" type="text/css" rel="stylesheet">
+      <link href="strange.css" type="text/css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="impress">
+
+         <div id="first" class="step" data-x="0" data-y="0" data-rotate="-360">
+            <span>Strange Loop 2012</span>
+         </div>
+
+         <div id="second" class="step" data-x="0" data-y="0" data-rotate="-360">
+            <span>BBQ in STL</span>                                                                      <!-- Just a few quotes -->
+         </div>
+
+         <div class="step" data-x="2000" data=y="0" data-rotate="-360">
+            <q>Anything we write that doesn't give us a competitive advantage, we plan                   <!-- Square CTO, ensures the code is HQ, that it is written for wide use -->
+               on open sourcing from the start.</q>
+         </div>
+
+         <div class="step" data-x="0" data-y="3000" data-rotate="-270" data-scale="3">
+            <q>Design by removing problems <b>not</b> by adding features</q>                             <!-- Feature creep is the end of good software, just adds more potential problems -->
+         </div>
+
+         <div class="step" data-x="-4000" data-y="0" data-rotate="-180" data-scale="5">
+            <q>I used to think programmers were recipe makers, now I believe that                        <!-- The key to good software is abstracting the functionality, other devs should -->
+               programmers are abstractioners</q>                                                        <!-- not need to know much to use an item of code ("black box") -->
+         </div>
+
+         <div class="step" data-x="0" data-y="-6000" data-rotate="-90" data-scale="7">
+            Writing software is only a fraction of the process.  We spend more time                      <!-- We need to focus on better abstracting and simplifying our abstractions of code -->
+            reading software and thinking about it.  The best remedy to this is to                       <!-- As good abstractions are done, we can then ignore the mass of the code, just knowing -->
+            better abstract and forget about the logic and functionality.                                <!-- how to use it (dom.js for example).  Ways to do that include heavy use of experimentation tools,
+                                                                                                              such as REPLs. -->
+         </div>
+
+         <div class="step" data-x="3000" data-y="-5500" data-rotate="-75" data-scale="5">
+            <q>I don't think the problem with programming is that we aren't doing                        <!-- The issue with software is not the speed that you write it, but the correctness of the end result -->
+               it <b>fast</b> enough.</q>
+         </div>
+
+         <div class="step" data-x="4000" data-y="-4500" data-rotate="-60" data-scale="4">
+            Thoughts:
+         </div>
+            <ul> <!-- spanning a list across slides -->
+
+         <div class="step" data-x="4500" data-y="-4000" data-rotate="-45" data-scale="3">
+            <li>Tests are not the answer, just a stopgap until a better solution                         <!-- Tests just doubles the amount of code, aka the amount of places to screw up and debug, Types are -->
+            comes up</li>                                                                                <!-- one solution, just not an option in most of our codebase (CF has *some* typing) -->
+         </div>
+
+         <div class="step" data-x="4900" data-y="-3600" data-rotate="-30" data-scale="2">
+            <li>The web is about to (or is currently) undergoing its own                                 <!-- Elm/Clojurescript for heavy FP javascript, Dart, ECMA 6, Go, Angular are all on the horizon and -->
+            renaissance</li>                                                                             <!-- important people are excited about them -->
+         </div>
+
+         <div class="step" data-x="5050" data-y="-3350" data-rotate="-15">
+            <li>We need to streamline our development environment differently,                           <!-- Most of what we do is edit and understand code written at different times and by different people, -->
+            we spend more time editting/reading code than writing</li>                                   <!-- our work environments should be optimized for this, as should our process -->
+         </div>
+            </ul>
+
+         <div class="step" data-x="6400" data-y="0">
+            <h1>ECMAScript 6 (Javascript):</h1>                                                          <!-- -->
+            Including: Actual classes (minimal form), actual importing of modules
+            (think node but client side oriented), symbols, defaults in arguments,
+            wildcard arguments, iterators/generators, promises (async callback
+            system), built in advanced data types (sets, maps, etc).
+         </div>
+
+         <div class="step es6" data-x="6400" data-y="1500">
+            <h1>ES6</h1>
+            <pre class="example">
+      <span>// module.js</span>
+      module Example {
+         export function hello(target = "World") {
+            console.log("Hello " + target);
+         };
+      }
+
+      <span>// main.js</span>
+      import { hello } from "module.js";
+      hello(); // "Hello World"
+      hello("Steve"); // "Hello Steve"
+            </pre>
+         </div>
+
+         <div class="step" data-x="8000" data-y="1500">
+            <h1>AngularJS</h1>
+            AngularJS is a client side web app framework written by Google.  It is
+            in the same vein as things like BackboneJS and KnockoutJS.  Rather than
+            relying heavily on Javascript configuration, it uses HTML attributes to
+            apply a lot of built in goodies (validation, dynamic mapping of data
+            models) through its templating system.
+         </div>
+
+         <div class="step" data-x="8000" data-y="3000">
+            <h1>Angular</h1>
+            <a href="http://jsfiddle.net/cxxU7/">http://jsfiddle.net/cxxU7/</a>
+         </div>
+
+         <div class="step" data-x="10000" data-y="3000">
+            <h1>Go</h1>
+            Go is a language created by Google for their infrastructure, emphasizing
+            concurrency.  Written by Rob Pike and Ken Thompson, it tries to bring in
+            parts from modern dynamic languages while getting the speed of compiled
+            languages.
+         </div>
+
+         <div class="step go" data-x="10000" data-y="4500">
+            <h1>Go normal</h1>
+            <pre class="example">
+      package main
+
+      import (
+         "fmt"
+         "time"
+      )
+
+      func main() {
+         fmt.Println("Timer 1: 3s")
+         time.Sleep(3 * 1e9)
+         fmt.Println("Timer 1 done")
+
+         fmt.Println("Timer 2: 1s")
+         time.Sleep(1 * 1e9)
+         fmt.Println("Timer 2 done")
+      }
+            </pre>
+         </div>
+
+         <div class="step go" data-x="10000" data-y="4500">
+            <h1>Go goroutines</h1>
+            <pre class="example">
+      package main
+
+      import (
+         "fmt"
+         "time"
+      )
+
+      func main() {
+         go func() {
+            fmt.Println("Timer 1: 3s")
+            time.Sleep(3 * 1e9)
+            fmt.Println("Timer 1 done")
+         }()
+
+         go func() {
+            fmt.Println("Timer 2: 1s")
+            time.Sleep(1 * 1e9)
+            fmt.Println("Timer 2 done")
+         }()
+
+         time.Sleep(4 * 1e9)
+      }
+         </pre>
+      </div>
+      <div class="step voice" data-x="20000" data-y="0" data-scale="11">
+         <div class="header">
+            Voice Navigated Apps
+         </div>
+      </div>
+      <div class="step voice" data-x="21000" data-y="1000" data-scale="10">
+         <div>
+            Robert Van Loghem
+         </div>
+         <div>
+            He's Dutch
+         </div>
+      </div>
+      <div class="step voice" data-x="23000" data-y="2000" data-scale="9">
+        They built a voice controlled train route navigator.
+        Voice is faster than typing on a phone for complicated user input.
+      </div>
+      <div class="step voice" data-x="24000" data-y="3000" data-scale="8">
+        Bad Examples of Voice Navigation
+      </div>
+      <div class="step voice" data-x="25000" data-y="4000" data-scale="7">
+        TV Volume Up
+        Next page
+        Continue
+
+        We can do these faster with a button.
+      </div>
+      <div class="step voice" data-x="21000" data-y="5000" data-scale="6">
+        Good examples:
+      </div>
+      <div class="step voice" data-x="21000" data-y="6000" data-scale="5">
+        I want to get from London to Paris.
+        I want 3 hamburgers and 2 fries.
+      </div>
+      <div class="step voice" data-x="21000" data-y="7000" data-scale="4">
+        Use voice to get complicated context from simple strings.
+        Don't worry about fancy language processing, just look for keywords.
+        Add support for hard to do but common tasks.
+        Define a clear vocabulary for your app and provide examples.
+        Don't mimic your normal user flow.
+        Took them 6 hours for the initial beta, only positive feedback so far.
+      </div>
+      <div class="step voice" data-x="21000" data-y="8000" data-scale="3">
+        Use in Compass:
+      </div>
+      <div class="step voice" data-x="21000" data-y="9000" data-scale="2">
+        I want to arrive one day before the show and leave the last day.
+        Key words arrive one day before, leave last day.
+        Amenities:  I want a king bed and early arrival, easy with voice.
+        Manage your users expectations, explain the magic to them.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        Cross Browser Testing with BrowserStack
+        Scott Gonzales, Project Lead for jqueryUI
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        Jquery is designed to be ran on Current Browsers and the Previous Revision, except for IE
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        They started off testing jQuery Mobile on physical devices and it was impossible to manage.  
+        Even keeping everything charged was a nightmare.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        BrowserStack supports multiple OS's, Broswers, and Mobile devices via emulators.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        It's simply an Amazon VM with a Flash frontend.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        It also has an in progress api for spinning up machines and making sure things render.  
+        They're working on having the api take screenshots for visual tests.
+        It has a tunnel so you can also test local development.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+         Use in Compass:
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+        I've already used it to develop the mobile redirect.  
+        Was able to test Chrome, IE, Opera, Safari, Iphone, Ipad, and many Android devices.
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+         Lets Take a Look:
+      </div>
+      <div class="step browser" data-x="21000" data-y="5000">
+         Price
+         $79/mo for 10 users, $169 for unlimited users.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo Db Unsession
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Jeffrey Galloway 
+         Ansers.com
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Quick hints I picked up:
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo uses BSON, which is JSON with types.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo runs awfully on EC2 if you don't have enough memory and hit the disk for data.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Never, ever run mongo in 32 bit mode.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         For error checking, regularlycheck getLastError if you care about your data.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Store large documents instead of small loads.
+      </div>
+      <div class ="step mongo" data-x="2200" data-y="10000">
+         Mongo will use more ram and disk space compared to sql.
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Visible Programming
+        Brett Victor
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        We are creating programs without seeing what they're doing at runtime
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        5 Things to aim for when designing an IDE.
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Read the Language
+            Make meaning transparent, explain in contest
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Follow the Flow
+            Make the flow tangeable and visible
+            Make time tangeable and visible
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        See the state
+            Show the data
+            Show comparisons
+            Eliminate hidden states
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Create by reacting
+            Get something on the screen as soon as possible
+            Dump the parts bucket onto the floor
+      </div>
+      <div class = "step prog" data-x="2400" data-y="15000">
+        Create by abstracting
+            Start constant, then vary
+            Start with one, then make many
+            Start concrete, then generalize
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Failed Presentations
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Computer Architecture of the Sixties.
+        Carlton Mills - Retired
+      <div class = "step failure" data-x="30000" data-y="0">
+        Started out promising
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Explained that many of today's problems were already solved back in the mainframe era of the 60's
+        Computers back then were multi cored, so they had to get a handle on multi threaded programming.
+        He also showed us many old adds and prices.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Then he went into crazy old man rant mode.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Then he went over and had to get kicked off the stage.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Stop using native html 5.
+        Kyle Simpson
+        Wrote the html5 Cookbook
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Wrote the h5ive facade for html 5 features, works kind of like a bad jQeury without nearly as many features and no polyfils.
+        If you want to use different syntax to write html5, but don't want it to work in any old browsers, he's your guy.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        He also looks like a nerdier John Goodman.
+      </div>
+
+      <div class = "step failure" data-x="30000" data-y="0">
+        As We Ma Do, AR and Computer Vision
+        Neil Milsted
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Started off using the word cyberspace, not a good start.
+        Also didn't check the lighting in the room, couldn't demo his ar code properly.
+        Solved a rubicks cube by holding it up to the camera and an arrow appeard on the screen.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Then his presentation crashed, and he didn't know how to resume it.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        He's never used a Kinect, and doesn't know about any other real world examples other than the first down line in football
+        Worst presentation of the show.
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Christ what an asshole.
+      </div>
+
+      <div class = "step failure" data-x="30000" data-y="0">
+        Doppio, JVM in the browser
+        Jez Ng, Cj Carey, Jonny Leahy
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Uses coffeescript and node.js
+      </div>
+      <div class = "step failure" data-x="30000" data-y="0">
+        Was their senior project, barely works.
+      </div>
+      <div class="step" data-x="12000" data-y="6000">
+            fin
+      </div>
+   </div>
+
+      <script src="impress.min.js"></script>
+      <script>impress().init();</script>
+   </body>
+</html>

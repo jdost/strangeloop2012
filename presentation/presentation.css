@@ -4,7 +4,7 @@ body {
 }
 .impress-on-first,
 .impress-on-second {
-  background-image: url('arch.jpg');
+  background-image: url('imgs/bg.jpg');
   background-attachment: fixed;
   background-size: 100% 100%;
   background-clip: content-box;
@@ -40,6 +40,14 @@ h1 {
 .step.active {
   opacity: 1;
   z-index: 1000;
+}
+.step.active img {
+  opacity: 1;
+}
+.step img {
+  margin: 0 300px;
+  width: 600px;
+  opacity: 0;
 }
 .example {
   min-height: 500px;
