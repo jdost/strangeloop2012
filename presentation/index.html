@@ -1,0 +1,169 @@
+<html>
+   <head>
+      <title>Strange Loop 2012</title>
+      <link href="presentation.less" type="text/css" rel="stylesheet/less">
+      <script src="less.min.js"></script>
+   </head>
+   <body>
+      <div id="impress">
+
+         <div id="first" class="step" data-x="0" data-y="0" data-rotate="-360">
+            <span>Strange Loop 2012</span>
+         </div>
+
+         <div id="second" class="step" data-x="0" data-y="0" data-rotate="-360">
+            <span>BBQ in STL</span>                                                                      <!-- Just a few quotes -->
+         </div>
+
+         <div class="step" data-x="2000" data=y="0" data-rotate="-360">
+            <q>Anything we write that doesn't give us a competitive advantage, we plan                   <!-- Square CTO, ensures the code is HQ, that it is written for wide use -->
+               on open sourcing from the start.</q>
+         </div>
+
+         <div class="step" data-x="0" data-y="3000" data-rotate="-270" data-scale="3">
+            <q>Design by removing problems <b>not</b> by adding features</q>                             <!-- Feature creep is the end of good software, just adds more potential problems -->
+         </div>
+
+         <div class="step" data-x="-4000" data-y="0" data-rotate="-180" data-scale="5">
+            <q>I used to think programmers were recipe makers, now I believe that                        <!-- The key to good software is abstracting the functionality, other devs should -->
+               programmers are abstractioners</q>                                                        <!-- not need to know much to use an item of code ("black box") -->
+         </div>
+
+         <div class="step" data-x="0" data-y="-6000" data-rotate="-90" data-scale="7">
+            Writing software is only a fraction of the process.  We spend more time                      <!-- We need to focus on better abstracting and simplifying our abstractions of code -->
+            reading software and thinking about it.  The best remedy to this is to                       <!-- As good abstractions are done, we can then ignore the mass of the code, just knowing -->
+            better abstract and forget about the logic and functionality.                                <!-- how to use it (dom.js for example).  Ways to do that include heavy use of experimentation tools,
+                                                                                                              such as REPLs. -->
+         </div>
+
+         <div class="step" data-x="3000" data-y="-5500" data-rotate="-75" data-scale="5">
+            <q>I don't think the problem with programming is that we aren't doing                        <!-- The issue with software is not the speed that you write it, but the correctness of the end result -->
+               it <b>fast</b> enough.</q>
+         </div>
+
+         <div class="step" data-x="4000" data-y="-4500" data-rotate="-60" data-scale="4">
+            Thoughts:
+         </div>
+            <ul> <!-- spanning a list across slides -->
+
+         <div class="step" data-x="4500" data-y="-4000" data-rotate="-45" data-scale="3">
+            <li>Tests are not the answer, just a stopgap until a better solution                         <!-- Tests just doubles the amount of code, aka the amount of places to screw up and debug, Types are -->
+            comes up</li>                                                                                <!-- one solution, just not an option in most of our codebase (CF has *some* typing) -->
+         </div>
+
+         <div class="step" data-x="4900" data-y="-3600" data-rotate="-30" data-scale="2">
+            <li>The web is about to (or is currently) undergoing its own                                 <!-- Elm/Clojurescript for heavy FP javascript, Dart, ECMA 6, Go, Angular are all on the horizon and -->
+            renaissance</li>                                                                             <!-- important people are excited about them -->
+         </div>
+
+         <div class="step" data-x="5050" data-y="-3350" data-rotate="-15">
+            <li>We need to streamline our development environment differently,                           <!-- Most of what we do is edit and understand code written at different times and by different people, -->
+            we spend more time editting/reading code than writing</li>                                   <!-- our work environments should be optimized for this, as should our process -->
+         </div>
+            </ul>
+
+         <div class="step" data-x="6400" data-y="0">
+            <h1>ECMAScript 6 (Javascript):</h1>                                                          <!-- -->
+            Including: Actual classes (minimal form), actual importing of modules
+            (think node but client side oriented), symbols, defaults in arguments,
+            wildcard arguments, iterators/generators, promises (async callback
+            system), built in advanced data types (sets, maps, etc).
+         </div>
+
+         <div class="step es6" data-x="6400" data-y="1500">
+            <h1>ES6</h1>
+            <pre class="example">
+      <span>// module.js</span>
+      module Example {
+         export function hello(target = "World") {
+            console.log("Hello " + target);
+         };
+      }
+
+      <span>// main.js</span>
+      import { hello } from "module.js";
+      hello(); // "Hello World"
+      hello("Steve"); // "Hello Steve"
+            </pre>
+         </div>
+
+         <div class="step" data-x="8000" data-y="1500">
+            <h1>AngularJS</h1>
+            AngularJS is a client side web app framework written by Google.  It is
+            in the same vein as things like BackboneJS and KnockoutJS.  Rather than
+            relying heavily on Javascript configuration, it uses HTML attributes to
+            apply a lot of built in goodies (validation, dynamic mapping of data
+            models) through its templating system.
+         </div>
+
+         <div class="step" data-x="8000" data-y="3000">
+            <h1>Angular</h1>
+            <a href="http://jsfiddle.net/cxxU7/">http://jsfiddle.net/cxxU7/</a>
+         </div>
+
+         <div class="step" data-x="10000" data-y="3000">
+            <h1>Go</h1>
+            Go is a language created by Google for their infrastructure, emphasizing
+            concurrency.  Written by Rob Pike and Ken Thompson, it tries to bring in
+            parts from modern dynamic languages while getting the speed of compiled
+            languages.
+         </div>
+
+         <div class="step go" data-x="10000" data-y="4500">
+            <h1>Go normal</h1>
+            <pre class="example">
+      package main
+
+      import (
+         "fmt"
+         "time"
+      )
+
+      func main() {
+         fmt.Println("Timer 1: 3s")
+         time.Sleep(3 * 1e9)
+         fmt.Println("Timer 1 done")
+
+         fmt.Println("Timer 2: 1s")
+         time.Sleep(1 * 1e9)
+         fmt.Println("Timer 2 done")
+      }
+            </pre>
+         </div>
+
+         <div class="step go" data-x="10000" data-y="4500">
+            <h1>Go goroutines</h1>
+            <pre class="example">
+      package main
+
+      import (
+         "fmt"
+         "time"
+      )
+
+      func main() {
+         go func() {
+            fmt.Println("Timer 1: 3s")
+            time.Sleep(3 * 1e9)
+            fmt.Println("Timer 1 done")
+         }()
+
+         go func() {
+            fmt.Println("Timer 2: 1s")
+            time.Sleep(1 * 1e9)
+            fmt.Println("Timer 2 done")
+         }()
+
+         time.Sleep(4 * 1e9)
+      }
+            </pre>
+         </div>
+
+         <div class="step" data-x="12000" data-y="6000">
+            fin
+         </div>
+      </div>
+      <script src="impress.min.js"></script>
+      <script>impress().init();</script>
+   </body>
+</html>
